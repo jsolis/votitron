@@ -1,0 +1,14 @@
+{
+  "name": "votitron",
+  "version": "1.0.0",
+  "description": "votes",
+  "main": "casper.js",
+  "scripts": {
+    "test": "casperjs test casper.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "casperjs": "^1.1.0-beta3"
+  }
+}
