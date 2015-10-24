@@ -13,13 +13,13 @@ casper.on('page.error', function(msg, trace) {
 });
 casper.test.begin('Resurrectio test', function(test) {
    casper.start('http://www.10best.com/awards/travel/best-app-website-for-booking-your-stay/priceline/');
-   casper.waitForSelector(x("//a[normalize-space(text())='Working...']"),
+   casper.waitForSelector(x("//a[normalize-space(text())='VOTE']"),
        function success() {
-           test.assertExists(x("//a[normalize-space(text())='Working...']"));
-           this.click(x("//a[normalize-space(text())='Working...']"));
+           test.assertExists(x("//a[normalize-space(text())='VOTE']"));
+           this.click(x("//a[normalize-space(text())='VOTE']"));
        },
        function fail() {
-           test.assertExists(x("//a[normalize-space(text())='Working...']"));
+           test.assertExists(x("//a[normalize-space(text())='VOTE']"));
    });
    casper.waitForSelector(".panel:nth-child(1) .t1",
        function success() {
