@@ -4,6 +4,7 @@
 
 var x = require('casper').selectXPath;
 casper.options.viewportSize = {width: 1437, height: 762};
+casper.options.pageSettings = {userAgent:'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36'};
 casper.on('page.error', function(msg, trace) {
    this.echo('Error: ' + msg, 'ERROR');
    for(var i=0; i<trace.length; i++) {
@@ -35,7 +36,9 @@ casper.test.begin('Resurrectio test', function(test) {
          },
        function fail() {
            test.assertExists(x("//*[contains(text(), \'Thanks for Voting\')]"));
-   });
+       },
+       20000
+   );
 
    casper.run(function() {test.done();});
 });
