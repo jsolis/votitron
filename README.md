@@ -3,7 +3,8 @@
 ## Setup
 ```
 npm install -g casperjs
-git clone https://github.com/jsolis/votitron.git && cd $_
+git clone https://github.com/jsolis/votitron.git
+cd votitron
 npm install
 ```
 
