@@ -9,6 +9,12 @@ npm install
 
 ## Running
 
+Once
 ```
-npm test
+./vote
+```
+
+Multiple Times
+```
+./vote 5
 ```
